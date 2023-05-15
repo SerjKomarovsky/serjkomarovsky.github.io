@@ -1,0 +1,15 @@
+:root {
+    --bg-gradient-start: #f4edfa;
+    --bg-gradient-end: #fdfeec;
+    --primary-color: #46a4f9;
+    --primary-color-hover: #2794f7;
+}
+
+body {
+    margin: 0;
+    font-family: Segoe UI, Tahoma, sans-serif;
+}
+
+html,body {
+    overflow: hidden;
+}

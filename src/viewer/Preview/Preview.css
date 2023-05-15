@@ -1,64 +1,28 @@
-body {
-    margin: 0;
-    background: rgb(244,237,250);
-    background: linear-gradient(45deg, rgba(244,237,250,1) 0%, rgba(253,254,236,1) 100%);
-    font-family: Segoe UI, Tahoma, sans-serif;
-    /* todo: use for buttons */
-    color: #46a4f9;
+.Preview {
+    width: 100%;
+    height: 100svh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: var(--bg-gradient-end);
+    background: linear-gradient(0deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
 }
 
-.Example input,
-.Example button {
-    font: inherit;
-}
-
-  .Example header {
-    background-color: #323639;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    color: white;
-  }
-
-  .Example header h1 {
-    font-size: inherit;
-    margin: 0;
-  }
-
-  .Example__container {
+.Preview__document {
+    margin: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-  }
+}
+.Preview__document__page {
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(138, 138, 138, .3);
+}
 
-  .Example__container__load {
-    margin-top: 1em;
-    color: white;
-  }
+.Preview__document__page:not(:last-child) {
+    margin-bottom: 20px;
+}
 
-  .Example__container__document {
-    margin: 1em 0;
-  }
-
-  .Example__container__document .react-pdf__Document {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .Example__container__document .react-pdf__Page {
-    max-width: calc(100% - 2em);
-    box-shadow: 0 0 18px 0px rgba(136, 136, 136, 0.2);
-    margin: 1em;
-  }
-
-  .Example__container__document .react-pdf__Page canvas {
+.Preview__document__page canvas {
     max-width: 100%;
     height: auto !important;
-  }
-
-  .Example__container__document .react-pdf__message {
-    padding: 20px;
-    color: white;
-  }
+}
