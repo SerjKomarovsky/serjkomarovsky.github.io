@@ -4,6 +4,7 @@ import type { PDFDocumentProxy } from 'pdfjs-dist';
 
 import { DownloadButton } from '../DownloadButton';
 import { Loader } from '../Loader';
+import { PDF_FILENAME } from '../../config';
 
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import './Preview.css';
@@ -16,7 +17,7 @@ const options = {
 type PDFFile = string | File | null;
 
 export function Preview() {
-    const [file, setFile] = useState<PDFFile>('/document.pdf');
+    const [file, setFile] = useState<PDFFile>(`/${PDF_FILENAME}`);
     const [isLoading, setIsLoading] = useState(true);
     const [numPages, setNumPages] = useState(0);
 
@@ -51,7 +52,7 @@ export function Preview() {
                     />
                 ))}
             </Document>
-            {!isLoading && <DownloadButton url='/document.pdf' />}
+            {!isLoading && <DownloadButton url={`/${PDF_FILENAME}`} />}
         </section>
     );
 };
