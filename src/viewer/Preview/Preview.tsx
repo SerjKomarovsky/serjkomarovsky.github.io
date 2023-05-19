@@ -49,6 +49,7 @@ export function Preview() {
                         pageNumber={index + 1}
                         loading=""
                         renderAnnotationLayer={false}
+                        width={900}
                     />
                 ))}
             </Document>

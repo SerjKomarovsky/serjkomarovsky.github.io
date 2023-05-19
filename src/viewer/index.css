@@ -1,7 +1,8 @@
 :root {
+    --bg-color: #eff2f9;
     --bg-gradient-start: #f4edfa;
     --bg-gradient-end: #fdfeec;
-    --primary-color: #46a4f9;
+    --primary-color: #1a91f0;
     --primary-color-hover: #2794f7;
 }
 

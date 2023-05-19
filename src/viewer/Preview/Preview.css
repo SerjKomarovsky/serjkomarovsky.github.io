@@ -3,8 +3,7 @@
     height: 100svh;
     box-sizing: border-box;
     overflow-y: auto;
-    background: var(--bg-gradient-end);
-    background: linear-gradient(0deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background: var(--bg-color);
 }
 
 .Preview__document {
@@ -15,7 +14,11 @@
 }
 .Preview__document__page {
     max-width: 100%;
-    box-shadow: 0 0 10px rgba(138, 138, 138, .3);
+    border-radius: 6px;
+    box-shadow: 0 20px 60px 0 rgba(186,200,227,.1), 0 16px 36px 0 rgba(186,200,227,.3)
+}
+.Preview__document__page canvas {
+    border-radius: 6px;
 }
 
 .Preview__document__page:not(:last-child) {
